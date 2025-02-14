@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: url("./images/bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #heading {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 2px red;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 2%;
+      }
+      .board {
+        width: 510px;
+        height: 814px;
+        margin: 0.5% auto;
+        border: 5px solid pink;
+        background-color: white;
+      }
+      .box {
+        width: 100px;
+        aspect-ratio: 1;
+        border: 1px solid pink;
+        background-color: rgba(255, 0, 0, 20%);
+        float: left;
+      }
+
+      .row:nth-child(2n) > .box:nth-child(2n):hover,
+      .row:nth-child(2n + 1) > .box:nth-child(2n + 1):hover {
+        background-color: yellow;
+        border: 1px solid black;
+      }
+
+      .row:nth-child(2n) > .box:nth-child(2n + 1):hover,
+      .row:nth-child(2n + 1) > .box:nth-child(2n):hover {
+        background-color: violet;
+        border: 1px solid black;
+      }
+
+      .loose:active {
+        background-image: url("./images/try.png");
+        background-size: cover;
+      }
+
+      #win:active {
+        background-color: white;
+        background-image: url("./images/win.png");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">get ready to play</h1>
+    <div class="board">
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box" id="win"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+      <div class="row">
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+        <div class="box loose"></div>
+      </div>
+    </div>
+  </body>
+</html>
