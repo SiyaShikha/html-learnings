@@ -58,10 +58,36 @@
         background-image: url("./images/win.png");
         background-size: cover;
       }
+      summary {
+        font-family: impact;
+        font-size: 30px;
+        text-decoration: underline solid black;
+      }
+      ul {
+        width: 350px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding-left: 5%;
+        margin-top: 5%;
+      }
+      details {
+        padding-left: 10%;
+        float: left;
+      }
     </style>
   </head>
   <body>
     <h1 id="heading">get ready to play</h1>
+    <details>
+      <summary>Instructions</summary>
+      <ul>
+        <li>Welcome to the search winning box game!</li>
+        <li>The game board contains 40 boxes</li>
+        <li>Only one of them is the winning box 🏆</li>
+        <li>Take a guess and try finding that box by clicking on the boxes.</li>
+      </ul>
+    </details>
     <div class="board">
       <div class="row">
         <div class="box loose"></div>
