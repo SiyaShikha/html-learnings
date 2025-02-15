@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tables</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 4%;
+        font-family: system-ui, -apple-system;
+        font-size: 20px;
+      }
+      table {
+        width: 82%;
+        margin: auto;
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      caption {
+        font-size: 28px;
+        margin-bottom: 2%;
+        font-weight: bold;
+      }
+      th,
+      td {
+        padding: 2% 4%;
+        border-bottom: 5px solid rgba(128, 128, 128, 30%);
+        text-align: left;
+      }
+      th {
+        background-color: rgba(0, 0, 255, 40%);
+        letter-spacing: 1px;
+      }
+      tbody tr:hover {
+        background-color: rgba(0, 0, 255, 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Pseudo classes for links
+      </caption>
+      <thead>
+        <tr>
+          <th>Pseudo Class</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>:link</td>
+          <td>Selects unvisited links.</td>
+          <td>a:link { color: blue; }</td>
+        </tr>
+        <tr>
+          <td>:visited</td>
+          <td>Selects links that have already been visited</td>
+          <td>a:visited { color: purple; }</td>
+        </tr>
+        <tr>
+          <td>:hover</td>
+          <td>Selects links when the mouse pointer hovers over them</td>
+          <td>a:hover { text-decoration: underline; }</td>
+        </tr>
+        <tr>
+          <td>:active</td>
+          <td>
+            Selects links at the moment they are being clicked or activated.
+          </td>
+          <td>a:active { color: red; }</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
