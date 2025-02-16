@@ -15,7 +15,6 @@
       table {
         width: 82%;
         margin: auto;
-        border: 1px solid #000;
         border-collapse: collapse;
       }
       caption {
@@ -29,12 +28,18 @@
         border-bottom: 5px solid rgba(128, 128, 128, 30%);
         text-align: left;
       }
-      th {
+      thead > tr > th {
         background-color: rgba(0, 0, 0, 40%);
         letter-spacing: 1px;
       }
-      tbody > tr:hover {
-        background-color: rgba(0, 0, 0, 20%);
+      tbody > tr > td {
+        color: rgba(0, 0, 0, 60%);
+      }
+      tbody > tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 8%);
+      }
+      tbody > tr:hover > td {
+        color: black;
       }
     </style>
   </head>
