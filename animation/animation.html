@@ -15,59 +15,49 @@
         width: 600px;
         margin: 100px auto;
       }
-      .even,
-      .odd {
+      .box {
         width: 100%;
         aspect-ratio: 1;
-        padding: 10%;
+        padding: 12%;
         border: 6px solid coral;
-        background-color: rgba(200, 0, 0, 0.2);
+        background-color: rgba(200, 0, 0, 0.3);
       }
 
-      .odd {
-        animation-name: rotate-odd;
+      .box {
+        animation-name: rotate;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-direction: alternate;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
 
-      .even {
-        animation-name: rotate-even;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-      }
-
-      @keyframes rotate-odd {
-        20% {
+      @keyframes rotate {
+        10% {
           transform: rotate(10deg);
         }
-        60% {
+        50% {
           transform: rotate(90deg);
         }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes rotate-even {
-        20% {
-          transform: rotate(100deg);
-        }
-        60% {
+        80% {
           transform: rotate(180deg);
         }
         100% {
-          transform: rotate(450deg);
+          transform: rotate(270deg);
         }
       }
     </style>
   </head>
   <body>
     <div class="parent">
-      <div class="odd">
-        <div class="even">
-          <div class="odd">
-            <div class="even">
-              <div class="odd">
-                <div class="even"></div>
+      <div class="box">
+        <div class="box">
+          <div class="box">
+            <div class="box">
+              <div class="box">
+                <div class="box"></div>
               </div>
             </div>
           </div>
