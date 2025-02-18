@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+      }
+      .parent {
+        width: 600px;
+        margin: 100px auto;
+      }
+      .even,
+      .odd {
+        width: 100%;
+        aspect-ratio: 1;
+        padding: 10%;
+        border: 6px solid coral;
+        background-color: rgba(200, 0, 0, 0.2);
+      }
+
+      .odd {
+        animation-name: rotate-odd;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+
+      .even {
+        animation-name: rotate-even;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes rotate-odd {
+        20% {
+          transform: rotate(10deg);
+        }
+        60% {
+          transform: rotate(90deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes rotate-even {
+        20% {
+          transform: rotate(100deg);
+        }
+        60% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(450deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="odd">
+        <div class="even">
+          <div class="odd">
+            <div class="even">
+              <div class="odd">
+                <div class="even"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

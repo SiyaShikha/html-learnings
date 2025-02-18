@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>disco</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+      }
+      .board {
+        width: 800px;
+        aspect-ratio: 1;
+        margin: 50px auto;
+        background-color: white;
+      }
+      .row {
+        width: 100%;
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        aspect-ratio: 1;
+        border: 1px solid pink;
+        animation-name: disco;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+      @keyframes disco {
+        to {
+          /* filter: invert(2); */
+          filter: drop-shadow(0px 0px 50px crimson);
+          /* filter: contrast(0.5); */
+          /* filter: blur(5px); */
+          /* filter: brightness(0.5); */
+          /* filter: hue-rotate(360deg); */
+        }
+        /* 10% {
+          transform: rotate(90deg);
+        }
+        50% {
+          transform: rotate(270deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        } */
+      }
+      .row:nth-child(odd) > .box:nth-child(odd) {
+        background-color: pink;
+      }
+      .row:nth-child(even) > .box:nth-child(even) {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
