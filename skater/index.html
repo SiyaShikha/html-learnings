@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Skating Journey</title>
     <style>
       * {
@@ -11,9 +12,12 @@
       }
 
       body {
-        font-size: 20px;
+        height: 100vh;
+        font-size: 1.2rem;
         font-weight: 100;
         margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
       }
 
       header {
@@ -26,6 +30,7 @@
         left: 0;
         right: 0;
         background-color: whitesmoke;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
 
       #nav-bar {
@@ -40,11 +45,13 @@
         font-size: 28px;
         color: rgba(0, 0, 0, 0.8);
         font-weight: lighter;
-        &:hover {
-          text-decoration: underline solid black 2px;
-          color: black;
-          font-size: 30px;
-        }
+        transition: all 0.4s ease;
+      }
+
+      header a:hover {
+        text-decoration: underline solid black 2px;
+        color: black;
+        transform: scale(1.1);
       }
 
       #logo {
@@ -55,34 +62,111 @@
         margin: 1%;
         border-radius: 50%;
         width: 10%;
-      }
-
-      #content {
-        width: 100%;
-        min-height: 1000px;
-        display: flex;
+        background-color: lightgray;
+        transition: all 0.2s ease;
       }
 
       aside {
         width: 20%;
-        background-color: rgba(0, 0, 0, 0.2);
+        min-height: 80%;
+        background-color: rgba(0, 0, 0, 0.1);
+        /* background-color: ghostwhite; */
       }
 
       main {
         width: 80%;
-        background-color: rgba(0, 0, 0, 0.8);
+        min-height: 72%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgba(0, 0, 0, 0.8); */
       }
+
+      #gallery {
+        width: 80%;
+        min-height: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 4px;
+      }
+
+      .img-box {
+        display: flex;
+        aspect-ratio: 1;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .img-box:hover {
+        /* transform: scale(1.04); */
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: grey;
+      }
+
       footer {
         width: 100%;
-        min-height: 200px;
-        background-color: rgba(0, 0, 0, 0.5);
+        min-height: 28%;
+        padding: 2%;
+        text-align: center;
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        line-height: 1.6em;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.6)
+        );
+        font-weight: 100;
+        color: white;
+      }
+      footer a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        #nav-bar {
+          flex-direction: column;
+        }
+
+        aside,
+        main {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #nav-bar {
+          flex-direction: column;
+        }
+
+        aside,
+        main {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
     <header>
       <div id="logo">
-        <img src="./images/myPic.jpeg" alt="logo" />
+        <img src="./images/logo.jpeg" alt="logo" />
       </div>
       <nav id="nav-bar">
         <a href="#">Home</a>
@@ -90,10 +174,72 @@
         <a href="#">Contact</a>
       </nav>
     </header>
-    <div id="content">
-      <aside></aside>
-      <main></main>
-    </div>
-    <footer></footer>
+    <aside></aside>
+    <main>
+      <h1>Photo Gallery</h1>
+      <div id="gallery">
+        <div class="img-box">
+          <img src="./images/photo7.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo6.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo10.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo9.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo1.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo8.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo2.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo4.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo7.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo6.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo10.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo9.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo1.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo8.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo2.jpeg" alt="" />
+        </div>
+        <div class="img-box">
+          <img src="./images/photo4.jpeg" alt="" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Skating Journey. All rights reserved.</p>
+      <p>
+        Follow us on:
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+      </p>
+      <p>
+        Contact us:
+        <a href="info@myskatingjourney.com">info@myskatingjourney.com</a>
+      </p>
+    </footer>
   </body>
 </html>
