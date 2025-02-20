@@ -39,7 +39,7 @@ header a {
   font-size: 28px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: lighter;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 
 header a:hover {
