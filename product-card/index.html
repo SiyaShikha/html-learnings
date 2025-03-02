@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Card</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        font-weight: 100;
+        margin-bottom: 4%;
+      }
+      .product-card {
+        width: 30%;
+        margin: 10% auto;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 60%);
+      }
+      .product-image {
+        width: 70%;
+        padding: 4%;
+      }
+      .product-title {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .product-price {
+        font-size: 26px;
+        font-weight: 300;
+      }
+      #original-price {
+        text-decoration: line-through;
+      }
+      #sp {
+        font-weight: 400;
+      }
+      ul {
+        text-align: left;
+        padding-left: 18%;
+      }
+      a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 2%;
+        border-radius: 10px;
+        margin: 1% 4% 4% 4%;
+      }
+      #buy-now {
+        background-color: green;
+      }
+      #atc {
+        background-color: orange;
+      }
+      #buy-now:hover,
+      #atc:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="product-card">
+      <img
+        class="product-image"
+        src="./images/skates.jpeg"
+        alt="inline skates"
+      />
+      <h2 class="product-title">Nivia Pro Inline Skates</h2>
+      <ul>
+        <li>Chassis-Alminium Frame</li>
+        <li>Wheels/Size-PU/90mm.</li>
+        <li>Bearing-ABEC-9 Chrome Steel.</li>
+        <li>Material - synthetic-fibre.</li>
+        <li>Product dimensions (l x b x h) - 34 cm x 28 cm x 10 cm.</li>
+        <li>Product weight - 1000 gm</li>
+        <li>100% pure pu 90 mm wheels and adjustable for 3 sizes</li>
+        <li>Heavy duty outer shoe and high cushioned inner shoe</li>
+      </ul>
+      <h3 class="product-price">
+        <span id="sp">Rs. 2999 &nbsp;</span>
+        <span id="original-price">Rs. 4999</span>
+      </h3>
+      <a id="atc" href="#">Add to cart</a>
+      <a id="buy-now" href="#">Buy Now</a>
+    </article>
+  </body>
+</html>
